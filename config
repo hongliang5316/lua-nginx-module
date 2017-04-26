@@ -318,6 +318,7 @@ HTTP_LUA_SRCS=" \
             $ngx_addon_dir/src/ngx_http_lua_req_body.c \
             $ngx_addon_dir/src/ngx_http_lua_uri.c \
             $ngx_addon_dir/src/ngx_http_lua_args.c \
+            $ngx_addon_dir/src/ngx_http_lua_exten.c \
             $ngx_addon_dir/src/ngx_http_lua_ctx.c \
             $ngx_addon_dir/src/ngx_http_lua_regex.c \
             $ngx_addon_dir/src/ngx_http_lua_module.c \
