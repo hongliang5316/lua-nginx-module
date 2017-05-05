@@ -24,7 +24,7 @@ ngx_http_lua_ffi_req_get_ext(ngx_http_request_t *r, size_t *len)
     }
 
     *len = ngx_min(r->exten.len, *len);
-    return (char *)r->exten.data;
+    return (char *) r->exten.data;
 }
 
 
