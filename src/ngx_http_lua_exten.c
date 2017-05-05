@@ -16,16 +16,15 @@
 #include "ngx_http_lua_util.h"
 
 
-int
-ngx_http_lua_ffi_req_get_ext(ngx_http_request_t *r, u_char *out, size_t *len)
+char *
+ngx_http_lua_ffi_req_get_ext(ngx_http_request_t *r, size_t *len)
 {
     if (r->connection->fd == (ngx_socket_t) -1) {
-        return NGX_HTTP_LUA_FFI_BAD_CONTEXT;
+        return NULL;
     }
 
     *len = ngx_min(r->exten.len, *len);
-    ngx_memcpy(out, r->exten.data, *len);
-    return NGX_OK;
+    return r->exten.data;
 }
 
 
